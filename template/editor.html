@@ -1,7 +1,7 @@
 <div ng-controller="EditorController">
     <ul>
-        <li>
-            <input type="text" />
+        <li ng-repeat="item in coreData.items track by $index">
+            <input type={{item.type}} />
             <button>-</button>
         </li>
     </ul>

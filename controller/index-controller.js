@@ -15,15 +15,12 @@ formModule.config(['$routeProvider',function ($routeProvider){
         .when('/preview',{
             templateUrl:'template/preview.html'
         })
-        
+
 }]);
-function indexController($scope){
-    $scope.coreData = {
-        status:'editor',
-        items:[]
-    };
+function indexController($scope,coreDataFactory){
+    $scope.coreData = coreDataFactory.coreData;;
     $scope.toggleFormStatus = function(coreData){
         coreData.status = (coreData.status == 'editor')?'preview':'editor';
     };
 }
-formModule.controller(controllerId,['$scope',indexController]);
+formModule.controller(controllerId,['$scope','CoreDataFactory',indexController]);

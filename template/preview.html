@@ -1,7 +1,7 @@
 <div ng-controller="PreviewController">
     <ul>
-        <li>
-            <input type="text" />
+        <li ng-repeat="item in coreData.items track by $index">
+            <input type={{item.type}} />
         </li>
     </ul>
     <button>提交</button>
