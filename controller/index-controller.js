@@ -7,16 +7,16 @@ var formModule = angular.module("formApp",['ngRoute']);
 formModule.config(['$routeProvider',function ($routeProvider){
     $routeProvider
         .when('/',{
-            templateUrl:'template/editor.html'
+            templateUrl:FORM.editorTemplate
         })
         .when('/editor',{
-            templateUrl:'template/editor.html'
+            templateUrl:FORM.editorTemplate
         })
         .when('/preview',{
-            templateUrl:'template/preview.html'
+            templateUrl:FORM.previewTemplate
         })
 }]);
 function indexController($scope,coreDataFactory){
-    $scope.coreData = coreDataFactory.coreData;;
+    $scope.coreData = coreDataFactory.coreData;
 }
 formModule.controller(controllerId,['$scope','CoreDataFactory',indexController]);
