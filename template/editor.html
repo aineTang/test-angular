@@ -5,5 +5,7 @@
             <button ng-click="removeItem($index)">-</button>
         </li>
     </ul>
-    <button>+</button>
+    <button ng-click="operateDialog(true)">+</button>
+    <ng-include src="'template/popup-dialog.html'" ng-show="dialog.isShowDialog">
+    </ng-include>
 </div>
