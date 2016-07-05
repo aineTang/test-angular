@@ -5,11 +5,18 @@
 var controllerId = "DialogController";
 
 function dialogController($scope){
-    $scope.selecteRadio = function (selectedType){
-        var item = {
-            type:selectedType
-        };
-        $scope.addItem(item);
+    $scope.selectedType = "";
+
+    $scope.selectRadio = function (selectedType){
+        if (selectedType){
+            var item = {
+                type:selectedType
+            };
+            $scope.addItem(item);
+        }
+        else{
+            alert("請添加選擇元素");
+        }
     }
 }
 

@@ -2,15 +2,15 @@
     <div>选择表单元素：</div>
     <div>
         <div>
-            <input type="radio" ng-value="'text'" ng-model="selectedType" name="formRadio" />
-            <span>文本</span>
+            <input id="textRadio" type="radio" ng-value="'text'" ng-model="selectedType" name="formRadio" />
+            <label for="textRadio">文本</label>
         </div>
         <div>
-            <input type="radio" ng-value="'date'" ng-model="selectedType" name="formRadio" />
-            <span>日期</span>
+            <input id="dateRadio" type="radio" ng-value="'date'" ng-model="selectedType" name="formRadio" />
+            <label for="dateRadio">日期</label>
         </div>
         <div>
-            <button ng-click="selecteRadio(selectedType)">选择</button>
+            <button ng-click="selectRadio(selectedType)">选择</button>
             <button ng-click="operateDialog(false)">关闭</button>
         </div>
     </div>

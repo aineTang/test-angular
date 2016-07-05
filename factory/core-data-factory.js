@@ -7,7 +7,6 @@ function coreDataFactory(){
     return {
         /*定义核心数据*/
         coreData:{
-            status:'editor',
             items:[
                 {
                     type:"text"

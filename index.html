@@ -7,10 +7,6 @@
 </head>
 <body>
 <div ng-controller="IndexController">
-    <div>
-        <a href="#/preview" ng-show="coreData.status == 'editor'" ng-click="toggleFormStatus(coreData)">预览</a>
-        <a href="#/editor" ng-show="coreData.status == 'preview'" ng-click="toggleFormStatus(coreData)">编辑</a>
-    </div>
     <div ng-view></div>
 </div>
 <script src="./node_modules/angular/angular.js"></script>
